@@ -1,0 +1,525 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.8em;
+    letter-spacing: 0.02em;
+    font-family: 'Mukta', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: rgb(255, 255, 255);
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    text-align: center;
+    background-image: url('/public/img/bkg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Nav */
+
+#navbar {
+    position: fixed;
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    background-color: rgb(15, 15, 15);
+    border-radius: 0 5rem 5rem 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    margin: 0 0.5rem;
+    padding: 0.5rem 0.7rem;
+}
+
+/* Header */
+
+#header-wrapper {
+    height: 40rem;
+    color: rgb(255, 255, 255);
+    background-image: url("/public/img/header-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 40%;
+}
+
+#profile-wrapper {
+    position: relative;
+    height: 85%;
+}
+
+#profile-wrapper::before {
+    position: absolute;
+    content: "";
+    top: 15%;
+    right: 0;
+    width: 18rem;
+    height: 100%;
+    background-color: rgb(7, 7, 7);
+    filter: opacity(60%);
+}
+
+#name {
+    position: absolute;
+    top: 19%;
+    right: 2%;
+    font-size: 1.8em;
+}
+
+#occupation {
+    position: absolute;
+    top: 28%;
+    right: 2%;
+    font-size: 1.2em;
+}
+
+#profile-info-wrapper {
+    position: absolute;
+    top: 45%;
+    right: 2%;
+    text-align: right;
+    font-size: 1em;
+}
+
+#email-wrapper, #github-wrapper {
+    margin: 0.8rem 0;
+}
+
+#email-title, #github {
+    font-size: 1em;
+}
+
+#email:hover, a:hover {
+    color: rgb(157, 149, 196);
+}
+
+/* About Me */
+
+#about-wrapper {
+    padding: 2rem;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+#about-title {
+    margin: 1rem 0;
+    font-size: 1.9em;
+}
+
+#about-p {
+    margin: 2rem 0;
+    width: 70%;
+    font-size: 1.1em;
+    text-align: left;
+}
+
+/* Projects */
+
+#featured-outer-wrapper {
+    padding: 1rem 0;
+    color: rgb(255, 255, 255);
+}
+
+#featured-title {
+    margin-bottom: 2rem;
+    font-size: 1.9em;
+}
+
+#featured-inner-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#project-wrapper {
+    width: 80%;
+    height: 25rem;
+    display: flex;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(168, 168, 168);
+}
+
+#img-wrapper {
+    padding: 0 1rem;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+#project-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#project-info-wrapper {
+    margin-top: 1rem;
+    padding: 2rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    text-align: left;
+}
+
+#project-name {
+    font-size: 1.5em;
+}
+
+#project-p {
+    font-size: 1.1em;
+    text-align: left;
+}
+
+#project-link, #submit-btn {
+    padding: 0.3rem 0;
+    width: 6rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(102, 92, 155);
+    border: transparent;
+}
+
+#fa-icon {
+    font-size: 1.8em;
+}
+
+#project-link:hover, #submit-btn:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+    transition: .2s ease-in;
+}
+
+#slider-btn {
+    padding: 0.3rem 1rem;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    background: transparent;
+    border: transparent;
+}
+
+#slider-btn:hover {
+    color: rgb(102, 92, 155);
+    cursor: pointer;
+}
+
+/* Skills */
+
+#skills-outer-wrapper {
+    padding: 1.5rem;
+    background-color: rgb(15, 9, 51);
+}
+
+#skills-title {
+    padding: 1rem;
+    font-size: 1.9em;
+    color: rgb(255, 255, 255);
+}
+
+#skills-inner-wrapper {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.skill-group {
+    width: 25%;
+}
+
+.skill-group > h3 {
+    margin: 1.5rem 0;
+    padding: 0.8rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(223, 223, 223);
+}
+
+.fa {
+    margin: 0.1rem 0 0 0.5rem;
+    font-size: 1.3em;
+}
+
+/* Contact */
+
+#contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+
+#questions-title {
+    margin-bottom: 3rem;
+    font-size: 1.9em;
+}
+
+#success-message {
+    width: 20%;
+    padding: 0.5rem;
+    font-size: 1em;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    background-color: rgb(41, 25, 129);
+}
+
+form {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+#form-wrapper {
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    font-size: 1.1em;
+}
+
+#left-form, #right-form {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+label {
+    text-align: left;
+}
+
+input, textarea {
+    padding: 0.8rem;
+    width: 100%;
+    font-size: 1em;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+textarea {
+    height: 100%;
+    resize: none;
+}
+
+input:focus, textarea:focus {
+    background-color: rgb(15, 9, 51);
+}
+
+#submit-btn {
+    align-self: center;
+    text-transform: uppercase;
+}
+
+/* Footer */
+
+footer {
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    width: 90%;
+    color: rgb(255, 255, 255);
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
+/* Media queries */
+
+@media (max-width: 900px) {
+    #featured-title, #about-title, #skills-title, #questions-title {
+        font-size: 1.6em;
+    }   
+    #about-wrapper {
+        width: 100%;
+    }
+    #project-wrapper {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    #img-wrapper {
+        padding: 0;
+        width: 80%;
+    }
+    #project-info-wrapper {
+        width: 100%;
+        align-items: center;
+    } 
+    .skill-group {
+        width: 50%;
+    }
+    #success-message {
+        width: 35%;
+    }
+    form {
+        gap: 2rem;
+    }
+    #form-wrapper {
+        gap: 1rem;
+    }
+    #left-form, #right-form {
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    #app {
+        gap: 3rem;
+    }
+    #navbar {
+        font-size: 0.9em;
+    }
+    ul li {
+        padding: 0.2rem 0.3rem;
+    }
+    #header-wrapper {
+        height: 30rem;
+    }
+    #profile-wrapper {
+        height: 80%;
+    }
+    #profile-wrapper::before {
+        width: 13rem;
+    }
+    #name {
+        font-size: 1.4em;
+    }
+    #occupation {
+        top: 31%;
+        font-size: 1em;
+    }
+    #profile-info-wrapper {
+        font-size: 0.8em;
+    }
+    #email-wrapper, #github-wrapper {
+        margin: 0.5rem 0;
+    }
+    #featured-title, #about-title, #skills-title, #questions-title {
+        font-size: 1.3em;
+    }
+    #about-p {
+        margin: 1rem 0;
+        width: 100%;
+        font-size: 0.9em;
+    }
+    #project-info-wrapper {
+        padding: 1rem;
+    }
+    #img-wrapper {
+        width: 100%;
+    }
+    #project-name {
+        font-size: 1.1em;
+    }
+    #project-p {
+        font-size: 1em;
+    }
+    #project-link {
+        padding: 0.1rem 0.5rem;
+        font-size: 0.8em;
+    }
+    #skills-outer-wrapper {
+        padding: 1rem;
+    }
+    #skills-inner-wrapper {
+        margin: 0.5rem 0;
+        gap: 1rem;
+    }
+    .skill-group {
+        font-size: 0.8em;
+    }
+    .skill-group > h3 {
+        margin: 1rem 0;
+        flex-direction: column;
+    }
+    #questions-title {
+        margin-bottom: 1rem;
+    }
+    #success-message {
+        width: 50%;
+        font-size: 0.8em;
+    }
+    #form-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1em;
+    }
+    #left-form, #right-form {
+        width: 80%;
+        gap: 0.5rem;
+
+    }
+    textarea {
+        resize: vertical;
+    }
+}
+
+@media (max-width: 350px) {
+    #app {
+        gap: 2rem;
+    }
+    #navbar {
+        font-size: 0.7em;
+    }
+    ul li {
+        padding: 0.1rem;
+    }
+    #header-wrapper {
+        height: 25rem;
+    }
+    #profile-wrapper {
+        height: 70%;
+    }
+    #profile-wrapper::before {
+        width: 11rem;
+        top: 20%;
+    }
+    #name {
+        font-size: 1.2em;
+    }
+    #occupation {
+        font-size: 0.8em;
+    }
+    #profile-info-wrapper {
+        font-size: 0.7em;
+    }
+    #about-p, #project-p, input, textarea, footer {
+        font-size: 0.8em;
+    }
+    #slider-btn {
+        padding: 0.3rem 0.6rem;
+        font-size: 1.5rem;
+    }
+    #project-link, #submit-btn {
+        padding: 0.1rem 0;
+        width: 4rem;
+        font-size: 0.7em;
+    }
+    #success-message {
+        width: 70%;
+    }
+    #left-form, #right-form {
+        width: 100%;
+    }
+}
