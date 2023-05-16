@@ -19,7 +19,7 @@ a {
     flex-direction: column;
     gap: 5rem;
     text-align: center;
-    background-image: url('/public/img/bkg.jpg');
+    background-image: url("./assets/bkg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -51,7 +51,7 @@ ul li {
 #header-wrapper {
     height: 40rem;
     color: rgb(255, 255, 255);
-    background-image: url("/public/img/header-img.jpg");
+    background-image: url("./assets/header-img.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 40%;
@@ -71,6 +71,13 @@ ul li {
     height: 100%;
     background-color: rgb(7, 7, 7);
     filter: opacity(60%);
+}
+
+#portfolio-title {
+    position: absolute;
+    top: 15%;
+    left: 2%;
+    font-size: 2.2em;
 }
 
 #name {
@@ -401,6 +408,10 @@ footer {
     #profile-wrapper::before {
         width: 13rem;
     }
+    #portfolio-title {
+        top: 8%;
+        font-size: 1.8em;
+    }
     #name {
         font-size: 1.4em;
     }
@@ -494,6 +505,9 @@ footer {
     #profile-wrapper::before {
         width: 11rem;
         top: 20%;
+    }
+    #portfolio-title {
+        font-size: 1.5em;
     }
     #name {
         font-size: 1.2em;
